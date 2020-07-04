@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>HEX Code Guessing Game</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+
+        <h1>What color is this HEX Code?</h1>
+
+        <div id="hexCode"></div>
+        <div id="first"></div>
+        <div id="second"></div>
+
+        <script>
+
+            correctRandomHex = '#' + Math.floor(Math.random() * 16777215).toString(16);
+            incorrectRandomHex = '#' + Math.floor(Math.random() * 16777215).toString(16);
+
+            document.getElementById("hexCode").innerHTML = correctRandomHex;
+
+            let correctColor = Math.floor(Math.random() * 2);
+            // Initiate counter
+            var counter = 0;
+
+            if (correctColor ===1 ) {
+                document.getElementById("first").style.backgroundColor = correctRandomHex;
+                document.getElementById("second").style.backgroundColor = incorrectRandomHex;
+                document.getElementById("first").addEventListener("click", /*function add() {
+                counter += 1; console.log(counter),*/ function() {alert("Correct! Points: " + counter, location.reload(), 
+                )});
+                document.getElementById("second").addEventListener("click", function() {alert("Incorrect! Points: " + counter, location.reload())});
+            }
+
+            else { 
+                document.getElementById("second").style.backgroundColor = correctRandomHex;
+                document.getElementById("first").style.backgroundColor = incorrectRandomHex;
+                document.getElementById("second").addEventListener("click", /*function add() {
+                counter += 1; console.log(counter),*/ function() {alert("Correct! Points: " + counter, location.reload(),
+                )});
+                document.getElementById("first").addEventListener("click", function() {alert("Incorrect! Points: " + counter, location.reload())});
+            }
+            
+
+          if (correctRandomHex) {
+            // Function to increment counter
+                function add() {
+                counter += 1;
+                console.log(counter);
+                }
+            }
+            else {
+                console.log(counter);
+            }
+            
+        </script>
+    </body>
+</html>
