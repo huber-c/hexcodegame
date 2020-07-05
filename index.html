@@ -27,9 +27,9 @@
                 document.getElementById("first").style.backgroundColor = correctRandomHex;
                 document.getElementById("second").style.backgroundColor = incorrectRandomHex;
                 document.getElementById("first").addEventListener("click", function add() {
-                counter += 1; console.log(counter); alert("Correct! Points: " + counter, location.reload(), 
-                )});
-                document.getElementById("second").addEventListener("click", function() {alert("Incorrect! Points: " + counter, location.reload())});
+                counter += 1; console.log(counter); alert("Correct! Points: " + counter, location.reload())});
+                document.getElementById("second").addEventListener("click", 
+                function() { console.log(counter); alert("Incorrect! Points: " + counter, location.reload())});
             }
 
             else { 
@@ -38,21 +38,9 @@
                 document.getElementById("second").addEventListener("click", function add() {
                 counter += 1; console.log(counter); alert("Correct! Points: " + counter, location.reload(),
                 )});
-                document.getElementById("first").addEventListener("click", function() {alert("Incorrect! Points: " + counter, location.reload())});
+                document.getElementById("first").addEventListener("click", 
+                function(){ console.log(counter); alert("Incorrect! Points: " + counter, location.reload())});
             }
-            
-
-          /*if (addEventListener === alert("Correct! Points: " + counter)) {
-            // Function to increment counter
-                function add() {
-                counter += 1;
-                console.log(counter);
-                }
-          }
-            else {
-                console.log(counter);
-                }
-            */
         </script>
     </body>
 </html>
