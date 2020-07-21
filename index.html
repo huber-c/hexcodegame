@@ -27,19 +27,42 @@
                 document.getElementById("first").style.backgroundColor = correctRandomHex;
                 document.getElementById("second").style.backgroundColor = incorrectRandomHex;
                 document.getElementById("first").addEventListener("click", function add() {
-                counter += 1; console.log(counter); alert("Correct! Points: " + counter, location.reload())});
+                counter += 1; console.log(counter); alert("Correct! Points: " + counter, 
+                correctRandomHex = '#' + Math.floor(Math.random() * 16777215).toString(16),
+                incorrectRandomHex = '#' + Math.floor(Math.random() * 16777215).toString(16),
+                document.getElementById("hexCode").innerHTML = correctRandomHex,
+                document.getElementById("first").style.backgroundColor = correctRandomHex,
+                document.getElementById("second").style.backgroundColor = incorrectRandomHex,
+                )});
                 document.getElementById("second").addEventListener("click", 
-                function() { console.log(counter); alert("Incorrect! Points: " + counter, location.reload())});
+                function() { console.log(counter); alert("Incorrect! Points: " + counter, 
+                correctRandomHex = '#' + Math.floor(Math.random() * 16777215).toString(16),
+                incorrectRandomHex = '#' + Math.floor(Math.random() * 16777215).toString(16),
+                document.getElementById("hexCode").innerHTML = correctRandomHex,
+                document.getElementById("first").style.backgroundColor = correctRandomHex,
+                document.getElementById("second").style.backgroundColor = incorrectRandomHex,
+                )});
             }
 
             else { 
                 document.getElementById("second").style.backgroundColor = correctRandomHex;
                 document.getElementById("first").style.backgroundColor = incorrectRandomHex;
                 document.getElementById("second").addEventListener("click", function add() {
-                counter += 1; console.log(counter); alert("Correct! Points: " + counter, location.reload(),
+                counter += 1; console.log(counter); alert("Correct! Points: " + counter, 
+                correctRandomHex = '#' + Math.floor(Math.random() * 16777215).toString(16),
+                incorrectRandomHex = '#' + Math.floor(Math.random() * 16777215).toString(16),
+                document.getElementById("hexCode").innerHTML = correctRandomHex,
+                document.getElementById("first").style.backgroundColor = correctRandomHex,
+                document.getElementById("second").style.backgroundColor = incorrectRandomHex,
                 )});
                 document.getElementById("first").addEventListener("click", 
-                function(){ console.log(counter); alert("Incorrect! Points: " + counter, location.reload())});
+                function(){ console.log(counter); alert("Incorrect! Points: " + counter, 
+                correctRandomHex = '#' + Math.floor(Math.random() * 16777215).toString(16),
+                incorrectRandomHex = '#' + Math.floor(Math.random() * 16777215).toString(16),
+                document.getElementById("hexCode").innerHTML = correctRandomHex,
+                document.getElementById("first").style.backgroundColor = correctRandomHex,
+                document.getElementById("second").style.backgroundColor = incorrectRandomHex,
+                )});
             }
         </script>
     </body>
